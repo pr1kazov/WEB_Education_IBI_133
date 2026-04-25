@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой любимый гаджет — iPad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌓</button>
+    <button class="random-bg-btn" id="randomBgBtn">🎨 Случайный фон</button>
+    <header>
+        <h1>Мой любимый гаджет: iPad</h1>
+    </header>
+
+    <main>
+        <section class="intro">
+            <center><p>
+                iPad — это не просто планшет, а мощный инструмент для творчества, работы и развлечений. 
+                Его элегантный дизайн, невероятная производительность и обширная экосистема приложений 
+                делают его идеальным спутником на каждый день. Я выбрал iPad за его универсальность: 
+                на нём можно рисовать с помощью Apple Pencil, печатать тексты с клавиатурой, 
+                смотреть фильмы на потрясающем дисплее Liquid Retina и оставаться на связи с близкими.
+            </p></center>
+            <img src="ipad.jpg" alt="Apple iPad" class="main-image zoomable">
+            
+        </section>
+        
+        <section class="slider-section">
+            <center><h2>Галерея моделей iPad</h2></center>
+            <div class="slider-container">
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <div class="slider-wrapper">
+                    <img src="ipad.jpg" alt="iPad" class="slider-image active">
+                    <img src="ipad_Air.jpg" alt="iPad Air" class="slider-image">
+                    <img src="ipad_mini.jpg" alt="iPad mini" class="slider-image">
+                </div>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+        
+        <section class="timer-section">
+            <center><h2>До презентации нового iPad осталось:</h2></center>
+            <div class="countdown" id="countdown">
+                <div class="time-block"><span class="time-value" id="days">00</span><span class="time-label">дней</span></div>
+                <div class="time-block"><span class="time-value" id="hours">00</span><span class="time-label">часов</span></div>
+                <div class="time-block"><span class="time-value" id="minutes">00</span><span class="time-label">минут</span></div>
+                <div class="time-block"><span class="time-value" id="seconds">00</span><span class="time-label">секунд</span></div>
+            </div>
+        </section>
+        
+        <section class="voting-section">
+            <center><h2>Голосование за лучший iPad</h2></center>
+            <form class="voting-form" id="votingForm">
+                <label><input type="radio" name="ipad" value="pro" checked> iPad Pro</label>
+                <label><input type="radio" name="ipad" value="air"> iPad Air</label>
+                <label><input type="radio" name="ipad" value="mini"> iPad mini</label>
+                <label><input type="radio" name="ipad" value="base"> iPad (базовая модель)</label>
+                <button type="submit">Проголосовать</button>
+            </form>
+
+            <div class="chart-container">
+                <center><h3>Результаты</h3></center>
+                <div class="bar-chart" id="barChart">
+                    <div class="bar-wrapper"><span class="bar-label">iPad Pro</span><div class="bar" id="bar-pro" style="width:0%">0%</div></div>
+                    <div class="bar-wrapper"><span class="bar-label">iPad Air</span><div class="bar" id="bar-air" style="width:0%">0%</div></div>
+                    <div class="bar-wrapper"><span class="bar-label">iPad mini</span><div class="bar" id="bar-mini" style="width:0%">0%</div></div>
+                    <div class="bar-wrapper"><span class="bar-label">iPad (базовая)</span><div class="bar" id="bar-base" style="width:0%">0%</div></div>
+                </div>
+            </div>
+        </section>
+        <nav class="page-links">
+            <a href="specs.html">Технические характеристики</a>
+            <a href="gallery.html">Галерея моделей</a>
+            <a href="why.html">Почему именно iPad</a>
+            <a href="accessories.html">Аксессуары</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p>© 2025, проект по HTML. Любимый гаджет — iPad.</p>
+        <button class="scroll-to-top" id="scrollToTopBtn" title="Наверх">↑</button>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
