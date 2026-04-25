@@ -1,0 +1,18 @@
+{% load static %}
+<section class="slider-section">
+    <h2>Галерея iPad</h2>
+    <div class="slider-container">
+        <button class="slider-btn prev" id="prevBtn">❮</button>
+        <div class="slider-wrapper">
+            <img src="{% static 'images/ipad.jpg' %}" alt="iPad" class="slider-image active">
+            <img src="{% static 'images/ipad_Air.jpg' %}" alt="iPad Air" class="slider-image">
+            <img src="{% static 'images/ipad_mini.jpg' %}" alt="iPad mini" class="slider-image">
+        </div>
+        <button class="slider-btn next" id="nextBtn">❯</button>
+    </div>
+    <div class="slider-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+</section>

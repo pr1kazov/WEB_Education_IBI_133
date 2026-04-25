@@ -1,0 +1,326 @@
+/* Основной блок */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f7;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #1d1d1f;
+    font-size: 2.4rem;
+    border-bottom: 2px solid #007aff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+img.main-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+nav.page-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+nav.page-links a, .back-link {
+    display: inline-block;
+    background-color: #007aff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav.page-links a:hover, .back-link:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+.back-link {
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Стили для списков */
+.spec-list, ul, ol {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 20px auto;
+    list-style-position: inside;
+}
+
+.spec-list li, ul li, ol li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.spec-list li:last-child, ul li:last-child, ol li:last-child {
+    border-bottom: none;
+}
+
+/* Стили для галереи изображений */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gallery figure {
+    background: #fff;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 250px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+section, header, footer, main, nav, .intro, .slider-section, .timer-section, .voting-section {
+    background-color: transparent !important;
+}
+
+/*++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++*/
+/* ЗАДАНИЕ 1 ТЁМНАЯ ТЕМА */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 { color: #ffffff; }
+body.dark-theme a { color: #4da6ff; }
+body.dark-theme .bar-label { color: #ddd; }
+body.dark-theme footer { color: #aaa; }
+body.dark-theme .slider-section,
+body.dark-theme .timer-section,
+body.dark-theme .voting-section {
+    background-color: #1a1a1a;
+}
+body.dark-theme nav.page-links a {
+    background-color: #3a6ea5;
+    color: #fff;
+}
+body.dark-theme ul li,
+body.dark-theme ol li,
+body.dark-theme .spec-list li {
+    color: #000000;          /* чёрный текст */
+}
+
+/* кнопка переключения темы */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 90px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.theme-toggle:hover { background: rgba(0,0,0,0.9); }
+
+/* ЗАДАНИЕ 2 СЛАЙДЕР */
+.slider-section {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.slider-image {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+    transition: opacity 0.5s ease;
+}
+.slider-image.active { display: block; }
+
+.slider-btn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+.slider-btn:hover { background: rgba(0,0,0,0.8); }
+
+.slider-dots { text-align: center; margin-top: 10px; }
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active { background: #007aff; }
+
+/* ЗАДАНИЕ 3 ЗУМ */
+.zoomable {
+    display: block;
+    margin: 20px auto;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+.zoomable:hover {
+    transform: scale(1.08);
+}
+
+/*ЗАДАНИЕ 4 ТАЙМЕР */
+.timer-section { text-align: center; margin: 30px 0; }
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.time-block {
+    background: #007aff;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 80px;
+}
+.time-value { font-size: 2rem; font-weight: bold; display: block; }
+.time-label { font-size: 0.9rem; }
+
+/* === ЗАДАНИЕ 5: КНОПКА "ВВЕРХ" === */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+    display: none;
+}
+.scroll-to-top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.scroll-to-top.visible { display: block; }
+
+/* ЗАДАНИЕ 6 ГОЛОСОВАНИЕ И ДИАГРАММА */
+.voting-section { max-width: 500px; margin: 30px auto; }
+.voting-form label { display: block; margin: 8px 0; }
+.voting-form button {
+    margin-top: 12px;
+    background: #007aff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.voting-form button:hover { background: #005bb5; }
+
+.chart-container { margin-top: 25px; }
+.bar-chart { display: flex; flex-direction: column; gap: 12px; }
+.bar-wrapper { display: flex; align-items: center; gap: 10px; }
+.bar-label { width: 120px; font-weight: 600; }
+.bar {
+    height: 30px;
+    background: #007aff;
+    border-radius: 8px;
+    text-align: right;
+    padding-right: 8px;
+    color: white;
+    line-height: 30px;
+    font-size: 0.9rem;
+    transition: width 0.5s ease;
+    min-width: fit-content;
+}
+
+/* ЗАДАНИЕ 7 кнопка случайного фона */
+.random-bg-btn {
+    position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 1000;
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.random-bg-btn:hover { background: #e68900; }

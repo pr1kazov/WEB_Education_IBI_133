@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Почему я выбрал iPad{% endblock %}
+{% block header %}Почему именно iPad?{% endblock %}
+
+{% block content %}
+<center><p>Несколько причин, по которым iPad остаётся моим любимым гаджетом:</p></center>
+<ol>
+    <li>Плавная и быстрая работа благодаря чипам Apple.</li>
+    <li>Огромный выбор приложений в App Store.</li>
+    <li>Поддержка Apple Pencil и клавиатуры.</li>
+    <li>Отличное качество сборки и материалов.</li>
+    <li>Долгая поддержка обновлениями.</li>
+</ol>
+<center><a href="{% url 'home' %}" class="back-link">← Главная</a></center>
+{% endblock %}

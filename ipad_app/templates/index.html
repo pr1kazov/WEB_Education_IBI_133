@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="intro">
+    <center>
+        <p>
+            iPad — это не просто планшет, а мощный инструмент для творчества, работы и развлечений.
+            Его элегантный дизайн, невероятная производительность и обширная экосистема приложений
+            делают его идеальным спутником на каждый день.
+        </p>
+    </center>
+    {% if ipads %}
+        {% with first_ipad=ipads|first %}
+            <img src="{% static 'images/ipad.jpg' %}" alt="{{ first_ipad.name }}" class="main-image zoomable">
+        {% endwith %}
+    {% else %}
+        <img src="{% static 'images/ipad.jpg' %}" alt="iPad" class="main-image zoomable">
+    {% endif %}
+</section>
+
+{% include 'includes/slider.html' %}
+{% include 'includes/timer.html' %}
+{% include 'includes/voting.html' %}
+
+<nav class="page-links">
+    <a href="{% url 'specs' %}">Технические характеристики</a>
+    <a href="{% url 'gallery' %}">Галерея моделей</a>
+    <a href="{% url 'why' %}">Почему именно iPad</a>
+    <a href="{% url 'accessories' %}">Аксессуары</a>
+</nav>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Аксессуары для iPad{% endblock %}
+{% block header %}Аксессуары{% endblock %}
+
+{% block content %}
+<center><p>Любимые аксессуары, которые делают использование iPad ещё удобнее:</p></center>
+<ul>
+    <li>Apple Pencil — для рисования и заметок.</li>
+    <li>Smart Keyboard Folio — полноценная клавиатура.</li>
+    <li>Чехол Magic Keyboard — трекпад и подсветка клавиш.</li>
+    <li>Защитное стекло — спасает экран от царапин.</li>
+    <li>USB-C хаб — для подключения флешек и мониторов.</li>
+</ul>
+<center><a href="{% url 'home' %}" class="back-link">← Главная</a></center>
+{% endblock %}

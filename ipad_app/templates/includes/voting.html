@@ -1,0 +1,32 @@
+<section class="voting-section">
+    <h2>Голосование за лучший iPad</h2>
+    <form class="voting-form" id="votingForm">
+        {% csrf_token %}
+        <label><input type="radio" name="ipad" value="pro" checked> iPad Pro</label>
+        <label><input type="radio" name="ipad" value="air"> iPad Air</label>
+        <label><input type="radio" name="ipad" value="mini"> iPad mini</label>
+        <label><input type="radio" name="ipad" value="base"> iPad (базовая модель)</label>
+        <button type="submit">Проголосовать</button>
+    </form>
+    <div class="chart-container">
+        <h3>Результаты голосования</h3>
+        <div class="bar-chart" id="barChart">
+            <div class="bar-wrapper">
+                <span class="bar-label">iPad Pro</span>
+                <div class="bar" id="bar-pro" style="width: 0%;">0%</div>
+            </div>
+            <div class="bar-wrapper">
+                <span class="bar-label">iPad Air</span>
+                <div class="bar" id="bar-air" style="width: 0%;">0%</div>
+            </div>
+            <div class="bar-wrapper">
+                <span class="bar-label">iPad mini</span>
+                <div class="bar" id="bar-mini" style="width: 0%;">0%</div>
+            </div>
+            <div class="bar-wrapper">
+                <span class="bar-label">iPad (базовая)</span>
+                <div class="bar" id="bar-base" style="width: 0%;">0%</div>
+            </div>
+        </div>
+    </div>
+</section>
